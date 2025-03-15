@@ -14,7 +14,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/dist ./dist  # 复制整个 dist 目录
+COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/pnpm-lock.yaml ./
 RUN npm install -g pnpm
