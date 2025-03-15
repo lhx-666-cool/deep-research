@@ -30,8 +30,6 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/pnpm-lock.yaml ./
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.env.local ./.env.local
-COPY --from=builder /app/.env ./.env
 
 # Install only production dependencies (assuming you have devDependencies)
 RUN npm install -g pnpm
