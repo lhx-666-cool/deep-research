@@ -1,12 +1,12 @@
 {
   "name": "deep-research",
   "description": "Deep Research with Google Gemini Models",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:export": "cross-env BUILD_MODE=export next build",
+    "build:export": "cross-env NEXT_PUBLIC_BUILD_MODE=export next build",
     "start": "next start",
     "lint": "next lint"
   },
